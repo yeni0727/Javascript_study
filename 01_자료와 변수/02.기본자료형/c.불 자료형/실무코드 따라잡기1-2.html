@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 티켓 예매: 한장만 예매하면서 오후 15시~23시 사이 예매 가능
+
+         var ticket = prompt('예매수량을 입력해주세요') //티켓예매수량
+         console.log(typeof ticket) //string결과
+
+         console.log(typeof Number(ticket)) //number결과
+
+         var time = 16
+
+         // var now = new Date() //날짜구하기
+         // console.log(now)
+
+         // var time = now.getHours() //현재 시 구하기(0~23시사이의 시간)
+         // console.log(time)
+
+         // Number(값): 해당 값을 숫자 타임으로 바꿔준다
+         if (Number(ticket) === 1 && time >= 15 && time <= 23) {
+            document.write('예매가 완료되었습니다.')
+         }
+      </script>
+   </body>
+</html>

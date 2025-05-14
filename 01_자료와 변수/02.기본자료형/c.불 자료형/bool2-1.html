@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var num1 //undefined:값이 정의되지 않은 변수
+         var num2 = null //비어있는 값
+         console.log('num1:', num1, 'num2:', num2)
+
+         //★ undefined,null,빈문자열(''),0은 무조건 false
+         //★ 쟤네를 제외한 값은 무조건 true
+
+         //  boolean() =>자바스크립트에서 제공해주는 함수:괄호안의 값이 t인지 f인지 알려줌
+         console.log(Boolean(undefined))
+         console.log(Boolean(num1))
+         console.log(Boolean(null))
+         console.log(Boolean(num2))
+
+         console.log('-------------------------')
+
+         console.log(Boolean(0))
+         console.log(Boolean(1))
+         console.log(Boolean(10))
+         console.log(Boolean(-10))
+
+         console.log('-------------------------')
+
+         console.log(Boolean(''))
+         console.log(Boolean('hi'))
+      </script>
+   </body>
+</html>

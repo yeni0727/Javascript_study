@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let list = ''
+
+         //  +=은 누적합산
+         list += '<ul>'
+         list += '    <li>hello</li>'
+         list += '    <li>javascript</li>'
+         list += '    <li>pyhton</li>'
+         list += '</ul>'
+         console.log(list)
+         document.write(list)
+
+         //벡틱으로 사용하기
+         let list2 = `
+         <ul>
+            <li>hello</li>
+            <li>javascript</li>
+            <li>pyhton</li>
+         </ul>
+         `
+         console.log(list2)
+         document.write(list2)
+      </script>
+   </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //로그인을 시도할때 로그인 시도 횟수를 loginCount 변수에 저장
+         const login = true //로그인시도 여부
+         let loginCount = 0 //로그인 시도 횟수
+
+         //로그인을 시도했을때 1씩 증가
+         if (login) {
+            loginCount++
+            // or loginCount +=1
+         }
+
+         document.write(`로그인 시도 횟수: ${loginCount} 회`)
+      </script>
+   </body>
+</html>

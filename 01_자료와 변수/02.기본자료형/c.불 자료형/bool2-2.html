@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 확인:사용자가 입력한 값을 변수에 저장
+         // 취소:null값을 변수에 저장
+         // prompt는 모든 값을 문자형으로 받아온다
+         //  취소(null)버튼을 눌러도 문자형으로
+         var name = prompt('당신의 이름은')
+         console.log(name)
+
+         //  값을 입력 -> 확인 버튼 클릭시 -> 문자열 -> name의 값 true -> if문 안의 코드 실행
+         //  값을 입력 -> 취소 버튼 클릭시 -> 빈문자열 -> name의 값 false -> if문 안의 코드 실행X
+         //  근데 prompt은 취소 버튼을 눌러도 null을 문자형으로 받아오기때문에 if문을 실행함
+         //  아무것도 입력 안하고 확인 누르면 빈문자열이라 if문 실행x
+         if (name) {
+            document.write('내 이름은' + name)
+         }
+      </script>
+   </body>
+</html>
