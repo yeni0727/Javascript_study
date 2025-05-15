@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const items = [
+            ['사과 1kg', '귤 1kg', '바나나 1송이', '오렌지 12개'],
+            [18000, 8000, 5000, 12000],
+         ]
+
+         const itemNames = items[0] //과일배열
+         const itemPrices = items[1] //가격배열
+
+         //과일 목록 출력
+         let html = `<ul>`
+         for (const itemName of itemNames) {
+            html += `<li>${itemName}</li>`
+         }
+         html += `</ul>`
+
+         document.write(html)
+         document.write(`<hr />`)
+
+         //가격
+         let htm2 = `<ul>`
+         for (const i in itemNames) {
+            htm2 += `<li>${itemNames[i]} 가격: ${itemPrices[i].toLocaleString('ko-KR')}원</li>`
+         }
+         htm2 += `</ul>`
+         document.write(htm2)
+      </script>
+   </body>
+</html>

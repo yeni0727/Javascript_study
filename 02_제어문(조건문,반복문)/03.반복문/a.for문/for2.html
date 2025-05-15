@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //1부터 100까지 숫자 모두 더하기
+         //  주의: 합산된 결과를 대입하는 변수는 반드시 초기값을 준다
+         let output = 0 //for문 바깥에 정의한다.
+         for (let i = 1; i <= 100; i++) {
+            output += i //output= output + i
+         }
+         console.log(`1~100까지 모두 더한 값:${output}`)
+
+         //1~10까지 숫자 모두 곱하기
+         let output2 = 1
+         for (let i = 1; 1 <= 10; i++) {
+            output2 *= i
+         }
+         console.log(`1~10까지 모두 곱한 값:${output2}`)
+      </script>
+   </body>
+</html>
