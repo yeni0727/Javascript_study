@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function earning(name, wage = 8590, hours = 40) {
+            console.log(`# ${name}님의 급여 정보`)
+            console.log(`-시급: ${wage.toLocaleString('ko-KR')}원`)
+            console.log(`-근무시간: ${hours}시간`)
+            console.log(`-급여: ${(wage * hours).toLocaleString('ko-KR')}원`)
+         }
+
+         //.toLocaleString('ko-KR')--숫자에 콤마찍기
+         earning('구름')
+         earning('별', 10000)
+         earning('지영', 10000, 52)
+      </script>
+   </body>
+</html>

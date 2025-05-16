@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function printNumber(num) {
+            if (num === 2) {
+               return
+            }
+            console.log(`매개변수로 받은 숫자는 ${num}입니다.`)
+         }
+         printNumber(1)
+         printNumber(2) //리턴문 만나면 함수 종료 시켜서 매개변수~2는 안찍힘
+         printNumber(3)
+      </script>
+   </body>
+</html>

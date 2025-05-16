@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //리턴 값이 없는 경우
+         function add(a, b) {
+            console.log('합: ', a + b)
+         }
+         //리턴값이 없는 함수를 실행시 받을 값이 없으므로 변수에서 받지x
+         add(1, 2)
+
+         console.log(add(1, 2)) //값은 찍히는데 undefined도뜸
+      </script>
+   </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function myFunc1(a, b) {
+            return a + b
+         }
+         console.log(myFunc1(1, 2))
+
+         const myFunc2 = (a, b) => {
+            return a + b
+         }
+         console.log(myFunc2(1, 2))
+
+         //실행 코드가 한줄일때{}생략 가능
+         const myFunc3 = (a, b) => console.log('합:', a + b)
+
+         myFunc3(1, 2)
+
+         //리턴값이 하나일때는 리턴,{}생략가능
+         const myFunc4 = (a, b) => a + b
+
+         console.log(myFunc4(1, 2))
+
+         //
+         const obj = { a: 'one', b: 'two', c: 'two' } //JSON객체
+
+         const myFunc5 = () => ({ a: 'one', b: 'two', c: 'two' }) //json객체 데이터를 리턴할 경우 {}와 리턴을 사용하고 ()를 추가함
+         // {return obj}
+
+         console.log(myFunc5())
+      </script>
+   </body>
+</html>

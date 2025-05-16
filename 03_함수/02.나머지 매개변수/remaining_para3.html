@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //일반과 나머지 매개변수 같이쓰기
+         function sample(a, b, ...c) {
+            console.log(a, b, c)
+         }
+         sample(1, 2) //----1,2,[]
+         sample(1, 2, 3) //----1,2,[3]
+         sample(1, 2, 3, 4) //----1,2,[3,4]
+      </script>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //비익명 함수는 호이스팅이됨 (함수명이 같아서 어피치가 만든 함수로 덮어쓰기됨)
+         var num = 100
+         //라이언 개발자
+         function menu() {
+            num += 100
+            alert(num)
+         }
+         menu()
+
+         //어피치 개발자
+         function menu() {
+            alert(num)
+         } //-----------------실행결과는 100
+      </script>
+   </body>
+</html>

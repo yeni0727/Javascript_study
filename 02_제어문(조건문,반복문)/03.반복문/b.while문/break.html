@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //무한반복 (true때문에)
+         for (let i = 0; true; i++) {
+            alert(`${i}번째 반복문입니다.`)
+
+            const isContinue = confirm('계속 하시겠습니까?')
+
+            //확인 누르면 f라 실행x
+            //취소 누르면 t가 되면서 실행
+            //break는 반복문을 아예 빠져나옴(for문 끝남)
+            if (!isContinue) {
+               break
+            }
+            alert('break문 아래코드')
+         }
+         alert('프로그램 종료')
+      </script>
+   </body>
+</html>

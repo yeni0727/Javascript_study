@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //1.함수 정의(선언)
+         //이름없는 함수
+         const add = function (a, d) {
+            return a + b
+         }
+
+         //2. 함수 실행(호출)
+         const result = add(10, 15)
+         console.log('result:', result) //---------result: 25찍힘
+
+         console.log(add(1, 2)) //----------콘솔에서 함수 바로실행가능(리턴값이 있으면 리턴값 바로 출력)
+
+         //함수의 타입과 함수 내용 출력(함수를 실행하는건 아님)
+         console.log(typeof add) //-------function
+         console.log(add) //--------ƒ add(a, b) {return a + b}
+      </script>
+   </body>
+</html>
