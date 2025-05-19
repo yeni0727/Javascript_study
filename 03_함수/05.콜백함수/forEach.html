@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const array1 = ['a', 'b', 'c']
+
+         //세가지중에 한가지,두가지만 출력도 가능
+         //콜백함수 매개변수명도 마음대로 할수있음
+         array1.forEach(function (element, index, array) {
+            console.log('index:', index, 'element:', element, 'array:', array)
+         })
+
+         array1.forEach((element) => console.log(element))
+      </script>
+   </body>
+</html>

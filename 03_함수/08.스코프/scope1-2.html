@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var a = 1 //전역변수
+         function vartest(a) {
+            var a = a + 1 //지역변수
+         }
+
+         vartest(a)
+         //지역변수 a에 접근하지 못하고 전역변수 a를 출력하므로 결과는 1
+         console.log(a)
+      </script>
+   </body>
+</html>
