@@ -91,64 +91,61 @@
                },
             ],
          }
-         // json객체 데이터만 출력하기
-         const darmas = data.result
-         console.log(darmas)
-         console.log(darmas[0])
-         console.log(darmas[1])
-         console.log(darmas[2])
+         const dramas = data.result
 
-         console.log('--------------------------------')
+         // 1. 드라마 제목, 줄거리, 주연배우만 모두 출력해 주세요.
 
-         //드라마 제목,년도 출력
-         console.log(darmas[0].title, darmas[0].year)
-         console.log(darmas[1].title, darmas[1].year)
-         console.log(darmas[2].title, darmas[2].year)
+         dramas.forEach((drama) => {
+            document.write(`<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast[0]},${drama.cast[1]}</p>`)
+         })
 
-         console.log('--------------------------------')
+         // dramas.forEach((drama) => {
+         //    document.write(`<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast[0]},${drama.cast[1]}</p>`)
+         // })
 
-         //드라마 제목,장르 출력
-         console.log(darmas[0].title, darmas[0].genre)
-         console.log(darmas[1].title, darmas[1].genre)
-         console.log(darmas[2].title, darmas[2].genre)
+         //1번 문제에서 드라마마다 주연배우 인원이 다르면 어떻게 출력해야 할까? -> map을 이용
+         // dramas.forEach((drama) => {
+         //    document.write(`<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast.map((acter) => actor)}</p>`)
+         // })
 
-         console.log('--------------------------------')
+         //2.드라마 장르 중 판타지에 해당하는 드라마 제목만 출력해주세요.
+         document.write(`<hr />`)
+         document.write(`<h2>판타지 드라마</h2>`)
 
-         //드라마 제목,주연 배우중 첫번째 배우만 출력
-         console.log(darmas[0].title, darmas[0].cast[0])
-         console.log(darmas[1].title, darmas[1].cast[0])
-         console.log(darmas[2].title, darmas[2].cast[0])
+         // const result1 = dramas.filter((drama) => {
+         //    const genres = drama.genre //장르만 추출
 
-         console.log('--------------------------------')
+         //    //장르가 판타지인 객체데이터만 result1에 저장
+         //    for (const genre of genres) {
+         //       if (genre === '판타지') {
+         //          return true
+         //       }
+         //    }
+         // })
+         // console.log(result1)
 
-         // 드라마 주연 배우를 추가하기
-         dramas[0].cast.push('권나라')
-         dramas[1].cast.push('서지혜')
-         dramas[2].cast.push('조현철')
+         // result1.forEach((drama) => {
+         //    document.write(`<p>${drama.title}</p>`)
+         // })
 
-         console.log(dramas[0].cast)
-         console.log(dramas[1].cast)
-         console.log(dramas[2].cast)
-         console.log('-------------------------')
+         //함수의 체이닝
+         /*const result1 = dramas
+            .filter((drama) => {
+               const genres = drama.genre
 
-         //이태원 클라쓰 시놉시스 수정하기
-         darmas[0].synopsis = '불합리한 세상 속, 고집과 객기로 뭉친 청춘들의 힙한 반란이 시작된다. 세계를 압축해 놓은 듯한 이태원. 이 작은 거리, 각자의 가치관으로 자유를 쫓는 그들의 창업 신화 <이태원 클라쓰>'
+               for (const genre of genres) {
+                  if (genre === '판타지') {
+                     return true
+                  }
+               }
+            })
+            .forEach((drama) => {
+               document.write(`<p>${drama.title}</p>`)
+            })*/
 
-         console.log(darmas[0])
-
-         console.log('-------------------------')
-
-         //킹덤 장르 '좀비'-> '공포'로 수정하기
-         console.log(darmas[9].genre)
-         darmas[9].genre[0] = '공포'
-         console.log(darmas[9])
-
-         console.log('-------------------------')
-
-         //킹덤 시놉시스 삭제하기
-         delete darmas[9].synopsis
-         console.log(darmas[9])
+         //includes함수 사용
+         //판타지가 배열에 포함되어있으면 리턴이 트루
+         const result1 = dramas.filter((drama) => drama.genre.includes('판타지')).forEach((drama) => document.write(`<p>${drama.title}</p>`))
       </script>
-      s
    </body>
 </html>

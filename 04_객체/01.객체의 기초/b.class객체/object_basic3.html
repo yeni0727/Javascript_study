@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //객체=속성+가능
+
+         //클래스 이름은 무조건 대문자로 시작
+         //클래스 = 설계도
+         class Car {
+            //속성
+            //생성자: 객체를 생성시 속성 값을 할당
+            //this.속성명 : 해당 객체의 속성
+            //this가 붙지 않는 건 매개변수
+            constructor(color, seater) {
+               this.color = color
+               this.seater = seater
+            }
+
+            //기능(함수)
+            run(status) {
+               if (status) {
+                  return this.color + '자동차가 달립니다'
+               }
+            }
+
+            stop(status) {
+               if (status) {
+                  return this.color + '자동차가 멈춥니다'
+               }
+            }
+         }
+
+         //객체 생성
+         const myCar1 = new Car('블랙', '4')
+         const myCar2 = new Car('화이트', '6')
+
+         //객체사용
+         console.log(`${myCar1.color}색상의 ${myCar1.seater}인승 자동차`)
+         console.log(`${myCar2.color}색상의 ${myCar2.seater}인승 자동차`)
+
+         //객체 함수 사용
+         console.log(myCar1.run(true))
+         console.log(myCar1.stop(true))
+
+         console.log(myCar2.run(true))
+         console.log(myCar2.stop(true))
+      </script>
+   </body>
+</html>
