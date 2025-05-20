@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let dog = {
+            name: '흰둥이',
+            owner: '신짱구',
+            age: '1살',
+            family: ['신짱구', '신짱아', '봉미선', '신형만'],
+            walk: function () {
+               console.log(this.name + '는 산책 중 입니다.')
+            },
+         }
+
+         delete dog.age
+         delete dog.family[0]
+         delete dog.walk
+         console.log(dog)
+
+         //비어있음 제거 방법
+         //1.splice() 이용
+         // dog.family.splice(0, 1)
+         // console.log(dog.family)
+
+         //2.filter() 이용
+         dog.family = dog.family.filter((item) => item !== undefined)
+         console.log(dog.family)
+      </script>
+   </body>
+</html>

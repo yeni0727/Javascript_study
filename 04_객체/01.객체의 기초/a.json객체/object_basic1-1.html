@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //객체 = 속성+기능(함수)
+         //json객체 한쌍의 데이터가 key: value형태로 구성된다
+         //json객체의 key는 중복x
+         let car1 = {
+            //자동차 객체의 속성
+            color: '블랙',
+            seater: '4',
+
+            //자동차 객체의 기능(함수)
+            run: function (status) {
+               return '블랙 자동차가 달립니다'
+            },
+            stop: function (status) {
+               return '블랙 자동차가 멈춥니다'
+            },
+         }
+         console.log('car1 객체의 color 속성:', car1.color)
+         console.log('car1 객체의 seater 속성:', car1.seater)
+         console.log('car1 객체의 run 기능:', car1.run(true))
+         console.log('car1 객체의 stop 기능:', car1.stop(true))
+
+         console.log('------------------------------------------------------')
+
+         let car2 = {
+            //객체의 속성
+            color: '화이트',
+            seater: 6,
+            //객체의 기능(함수)
+            run: function (status) {
+               if (status) {
+                  return '화이트 자동차가 달립니다.'
+               }
+            },
+            stop: function (status) {
+               if (status) {
+                  return '화이트 자동차가 멈춥니다.'
+               }
+            },
+         }
+
+         console.log('car2 객체의 color 속성:', car2.color)
+         console.log('car2 객체의 seater 속성:', car2.seater)
+         console.log('car2 객체의 run 기능:', car2.run(true))
+         console.log('car2 객체의 stop 기능:', car2.stop(true))
+      </script>
+   </body>
+</html>

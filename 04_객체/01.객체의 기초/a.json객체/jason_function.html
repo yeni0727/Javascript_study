@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const iPhone15 = {
+            model: 'iPhone 15',
+            manufacturer: 'Apple',
+            releaseYear: 2023,
+            colors: ['Black', 'Blue', 'Pink', 'Yellow', 'Green'],
+         }
+
+         document.write(iPhone15)
+         document.write('<hr />')
+
+         //json객체를 문자열로 바꾸는 방법
+         const jsonToString1 = JSON.stringify(iPhone15)
+         document.write(jsonToString1)
+         console.log(jsonToString1)
+
+         const jsonToString2 = JSON.stringify(iPhone15, null, 2)
+         console.log(jsonToString2)
+
+         document.write('<hr />')
+
+         //문자열 -> json
+         const iPhone15_2 = '{"model":"iPhone 15","manufacturer":"Apple","releaseYear":2023,"colors":["Black","Blue","Pink","Yellow","Green"]}'
+
+         const stringToJason = JSON.parse(iPhone15_2)
+         document.write(stringToJason)
+         console.log(stringToJason)
+      </script>
+   </body>
+</html>

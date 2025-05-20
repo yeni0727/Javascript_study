@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let car1 = {
+            //car 객체의 속성
+            color: '블랙',
+            seater: 4,
+            //car 객체의 기능(함수)
+            run: function (status) {
+               if (status) {
+                  // this는 현재 이 객체를 의미 -> 따라서 this.color 는 car1.color와 같다
+                  return this.color + ' 자동차가 달립니다.'
+               }
+            },
+            stop: function (status) {
+               if (status) {
+                  return this.color + ' 자동차가 멈춥니다.'
+               }
+            },
+         }
+         console.log('car1 객체의 color 속성:', car1.color)
+         console.log('car1 객체의 seater 속성:', car1.seater)
+         console.log('car1 객체의 run 기능:', car1.run(true))
+         console.log('car1 객체의 stop 기능:', car1.stop(true))
+
+         console.log('------------------------------------------------------')
+
+         let car2 = {
+            //객체의 속성
+            color: '화이트',
+            seater: 6,
+            //객체의 기능(함수)
+            run: function (status) {
+               if (status) {
+                  return this.color + '자동차가 달립니다.'
+               }
+            },
+            stop: function (status) {
+               if (status) {
+                  return this.color + '자동차가 멈춥니다.'
+               }
+            },
+         }
+
+         console.log('car2 객체의 color 속성:', car2.color)
+         console.log('car2 객체의 seater 속성:', car2.seater)
+         console.log('car2 객체의 run 기능:', car2.run(true))
+         console.log('car2 객체의 stop 기능:', car2.stop(true))
+      </script>
+   </body>
+</html>
