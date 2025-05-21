@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="a"></div>
+      <div id="b"></div>
+
+      <script>
+         const a = document.querySelector('#a')
+         const b = document.querySelector('#b')
+
+         a.textContent = '<h1>textContent속성</h1>' //태그 인식못함(문자열로 인식함)
+         b.innerHTML = '<h1>inner HTML속성</h1>' //태그로 인식
+      </script>
+   </body>
+</html>

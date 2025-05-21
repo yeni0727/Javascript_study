@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var t = 'Hello Thank you good luck to you'
+
+         for (i in t) {
+            document.write(`(${i}:${t[i]})`)
+         }
+
+         document.write('<hr />')
+         //해당 인덱스 번호의 문자 출력
+         document.write(t.charAt(16), '<br>')
+
+         document.write(t.indexOf('you'), '<br>') //처음부터 찾음
+         document.write(t.indexOf('you', 16), '<br>') //16번 인덱스 이후로 찾는다는 의미
+
+         document.write('<hr />')
+
+         //해당 문자열이 몇번째 인덱스에 있는지 찾아줌
+         document.write(t.search('you'), '<br>')
+
+         //문자열을 잘라서 가져오는데 끝 직전 인덱스까지 가져옴
+         document.write(t.substring(6, 12), '<br>') //6~11번까지
+         document.write(t.substring(0, 5), '<br>') //0~4번까지
+
+         document.write('<hr />')
+
+         //원하는 문자열로 바꿔준다 (you->me)
+         document.write(t.replace('you', 'me'), '<br>')
+         document.write(t.length, '<br>')
+
+         document.write('<hr />')
+
+         //특정 기준으로 문자열을 잘라서 배열!!로 저장
+         var s = t.split(' ')
+         console.log(s)
+
+         var names = '철수/짱구/유리/맹구'
+         console.log(names.split('/')) //슬래시 기준으로 자름
+      </script>
+   </body>
+</html>

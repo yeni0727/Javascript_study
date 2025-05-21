@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var num = 2.1234
+
+         var maxNum = Math.max(10, 5, 8, 30)
+         var minNum = Math.min(10, 5, 8, 30)
+         var roundNum = Math.round(num) //반올림
+         var floorNum = Math.floor(num) //내림
+         var ceilNum = Math.ceil(num) //올림
+         var rndNum = Math.random() //0~1사이 랜덤숫자
+         var piNum = Math.PI
+
+         //1~10사이 랜덤한 정수 공식:Math.floor(Math.random()*(최댓값-최솟값+1)) + 최솟값;
+         var random = Math.floor(Math.random() * (10 - 1 + 1)) + 1
+
+         document.write(maxNum, '<br>')
+         document.write(minNum, '<br>')
+         document.write(roundNum, '<br>')
+         document.write(floorNum, '<br>')
+         document.write(ceilNum, '<br>')
+         document.write(rndNum, '<br>')
+         document.write(piNum, '<br>')
+         document.write(random, '<br>')
+      </script>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1 class="title" id="title">header</h1>
+
+      <script>
+         //  const header = document.querySelector('h1')
+         const header = document.querySelector('#title')
+
+         console.log(header)
+
+         //css속성명은 반드시 카멜표기법
+         //style.css속성명=속성값
+         //속성값은 반드시 문자열 혹은 숫자형으로 사용
+         header.style.color = 'white'
+         header.style.backgroundColor = 'black'
+         header.style.padding = '10px'
+      </script>
+   </body>
+</html>
