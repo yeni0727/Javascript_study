@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1></h1>
+      <textarea></textarea>
+
+      <script>
+         //키보드 이벤트 사용시 아시아권 문자를 제대로 구현하지 못하는 경우를 해결하는 코드
+         //트위터에서는 타이머를 사용해서 50밀리초마다 입력 양식의 내부 글자를 확인
+         const textarea = document.querySelector('textarea')
+         const h1 = document.querySelector('h1')
+         let timerId
+
+         textarea.addEventListener('focus', (e) => {
+            timerId = setInterval(() => {
+               const length = textarea.value.length //입력된글자수
+               h1.textContent = `글자 수: ${length}`
+            }, 50)
+
+            //포커스 해제시
+            textarea.addEventListener('blur', (e) => {
+               clearInterval(timerId)
+            })
+         })
+      </script>
+   </body>
+</html>

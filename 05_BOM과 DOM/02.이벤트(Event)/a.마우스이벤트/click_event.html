@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         h1 {
+            user-select: none; /*클릭을 했을때 색 안바뀌게함*/
+         }
+      </style>
+   </head>
+   <body>
+      <h1>클릭 횟수:0</h1>
+      <script>
+         let counter = 0
+         const h1 = document.querySelector('h1')
+
+         //클릭 이벤트 적용
+         h1.addEventListener('click', () => {
+            counter++
+            h1.textContent = `클릭횟수:${counter}`
+         })
+      </script>
+   </body>
+</html>
