@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Document</title>
+      <script>
+         const dog1 = {
+            이름: '구름',
+            나이: 6,
+            종족: '강아지',
+         }
+         const dog2 = {
+            ...dog1,
+            이름: '별',
+            나이: 1,
+            예방접종: true,
+         }
+
+         //key값이 같다면 나중에 오는 값으로 덮어쓰기(여기서는 이름,나이)
+
+         console.log(dog1)
+         console.log(dog2) //{"이름":"별","나이":1,"종족":"강아지","예방접종":true}
+      </script>
+   </head>
+   <body></body>
+</html>
