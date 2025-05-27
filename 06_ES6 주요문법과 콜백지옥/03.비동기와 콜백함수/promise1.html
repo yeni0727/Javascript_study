@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function add(x) {
+            return new Promise((resolve) => {
+               let sum = x + x
+               console.log(sum)
+               resolve(sum)
+            })
+         }
+
+         add(2)
+            .then((res) => {
+               return add(res)
+            })
+            .then((res) => {
+               return add(res)
+            })
+            .then((res) => {
+               console.log('finish:', res)
+            })
+      </script>
+   </body>
+</html>

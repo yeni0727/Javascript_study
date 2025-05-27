@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //비동기 사례 (작업이 시작된 후 그 작업이 완료되기를 기다리지 않고 다음 작업을 실행)
+
+         // console.log('hello')
+
+         // setTimeout(function () {
+         //    console.log('bye')
+         // }, 3000)
+
+         // console.log('hello Agn')
+         //결과 hello hello Agn 3초뒤 bye
+
+         //비동기를 동기로 바꾸는 법 ->콜백함수 (순차적으로 실행하게)
+         function sayGoodbye(callback) {
+            setTimeout(function () {
+               console.log('bye')
+               callback()
+            }, 3000)
+         }
+
+         console.log('hello')
+
+         sayGoodbye(function () {
+            console.log('Hello Agn')
+         })
+
+         //동기적인 부분과는 상관x
+         console.log('haha')
+      </script>
+   </body>
+</html>

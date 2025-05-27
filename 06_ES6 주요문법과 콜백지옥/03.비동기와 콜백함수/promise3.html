@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //promise의 상태
+         function asyncTask() {
+            return new Promise((resolve, reject) => {
+               setTimeout(() => {
+                  const success = true //작업이 성공했다고 가정
+
+                  if (success) {
+                     //대기(pending) 상태: resolve혹은 reject가 실행되기 직전상태
+                     resolve('Task success') //promise 상태를 대기(pending) -> 이행(fulfilled)로 변경
+                  } else {
+                     reject('Task failed') //promise 상태를 대기(pending) -> 거부(rejected)로 변
+                  }
+               })
+            })
+         }
+
+         asyncTask()
+            .then((result) => {
+               console.log(result) //resolve로 실행했을때 Task success
+            })
+            .catch((error) => {
+               console.log(error) //reject로 실행했을때 Task failed
+            })
+      </script>
+   </body>
+</html>

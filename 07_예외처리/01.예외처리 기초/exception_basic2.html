@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>예제</title>
+   </head>
+   <body>
+      <script>
+         const h1 = document.querySelector('h1')
+
+         //h1이 존재하지 않아서 발생하는 에러를 조건문으로 처리
+         if (h1) {
+            h1.textContent = '안녕하세요' //h1이 존재한다면 h1 태그에 '안녕하세요' 넣어줌
+         } else {
+            console.log('h1 태그를 추출할 수 없습니다.') //h1이 존재하지 않는다면 콘솔에 메세지 출력
+         }
+
+         console.log('완료!')
+      </script>
+   </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //5개의 빈배열
+         try {
+            const array = new Array(9999999999)
+         } catch (error) {
+            console.log(error)
+
+            console.log('예외이름 : ', error.name)
+            console.log('예외메세지 : ', error.message)
+         }
+      </script>
+   </body>
+</html>
