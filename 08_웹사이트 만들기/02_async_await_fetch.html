@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const options = {
+            method: 'GET',
+            headers: {
+               accept: 'application/json',
+               Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MTAyODM4ODM0MzUyNTczMTRjOWFiODQ3MTAxYjAwYyIsIm5iZiI6MTc0ODM5Mzk5NS4yMywic3ViIjoiNjgzNjYwMGJhMzJjNjllNjFjMDU1ZWEyIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.cSY5NOcTYGpxWtzEe6Mkyqi8eKbFGyYhs_f30rLFuEQ',
+            },
+         }
+         /*
+fetch는 왜 promise를 사용해서 구현했을까?(왜 비동기로 구현했나)
+promise, async  -> 비동기
+request 해주는 과정을 비동기로 동작시키고 있다
+
+서버에 장애가 있거나 네트워크 문제가 생길때 동기적으로 실행이 된다면 사용자는 다른 코드가 실행되지 못하므로 사용자는 다른 작업을 할 수 없다=> 따라서 서버에서 데이터 가져오는걸 비동기로 구현
+
+*/
+
+         const url = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR'
+
+         // async function getPlayingMovies() {}
+         const getPlayingMovies = async (url) => {
+            try {
+               const res = await fetch(url, options)
+               // console.log(res) 서버에서 데이터 가져올때까지 시간이 걸리므로 기다린다.
+
+               const data = await res.json() //fetch()실행을 완료하기까지 기다린 후 응답 데이터를 받아야하므로
+               console.log(data)
+
+               data.results.forEach((result) => {
+                  console.log(result.title)
+                  console.log(result.id)
+                  console.log(result.poster_path)
+                  console.log(result.vote_average)
+                  console.log('')
+               })
+            } catch (error) {
+               console.log('에러발생:', error)
+            }
+         }
+
+         getPlayingMovies(url)
+      </script>
+   </body>
+</html>

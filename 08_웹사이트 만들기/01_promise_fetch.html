@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const options = {
+            method: 'GET',
+            //RESTful 방식중 get 방식으로 요청 -> read하게해줘! ->현재 상영중인 영화를 읽게해줘(데이터줘!)
+            headers: {
+               accept: 'application/json', //json 객체로 데이터를 받을거야 라고 서버에게 전달
+               //Authorization: 보안을 위해서 서버에 같이 전달하는 인증키
+               Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MTAyODM4ODM0MzUyNTczMTRjOWFiODQ3MTAxYjAwYyIsIm5iZiI6MTc0ODM5Mzk5NS4yMywic3ViIjoiNjgzNjYwMGJhMzJjNjllNjFjMDU1ZWEyIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.cSY5NOcTYGpxWtzEe6Mkyqi8eKbFGyYhs_f30rLFuEQ',
+            },
+         }
+
+         /*function fetch(url, options) {
+            return new Promise((resolve, reject) => {
+                ... reject 한 후 response 데이터를 resolve해주는 코드 구현
+                resolve (response 영화 정보+데이터)
+                reject(에러메세지 or 에러객체)
+                })} */
+
+         // fetch :서버에 Request를 요청하는 함수
+         // fetch(request주소, request 할때 서버에 같이 전달되는 옵션)
+         // 물음표 뒤는 쿼리스트링: 서버에 보내는 값들(주소에 노출해서 보내는 값-get방식 노출하지않는건 post) (여기서는 language=ko-KR , page=1 key=value와 똑같)
+
+         fetch('https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR', options)
+            .then((res) => res.json())
+            /*
+            .then ((res)=>{ 
+            consol.log('res:', res) //response정보+영화데이터
+            return res.json()}) //실제 영화데이터만 리턴 */
+
+            .then((res) => console.log(res)) //실제 영화데이터
+            .catch((err) => console.error(err)) //reject할때 문제발생시 실현
+      </script>
+   </body>
+</html>
