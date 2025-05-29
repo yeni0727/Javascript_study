@@ -32,12 +32,12 @@ const getPlayingMovies = async (url) => {
             rowHtml += `
                        <div class="col-sm-3 p-3">
                      <div class="card">
-                        <a href="#">
+                        <a href="./detail.html?movie_id=${movie.id}">
                            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top poster" alt="poster" />
                         </a>
                         <div class="card-body">
                            <p class="card-text title">${movie.title}</p>
-                           <p class="card-text average">${movie.vote_average.toFixed(1)}점</p>
+                           <p class="card-text average">${Number(movie.vote_average) === 0 ? '미반영' : movie.vote_average.toFixed(1) + '점'}</p>
                         </div>
                      </div>
                  </div>`
